@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
 body {
+    font-family: 'Source Sans Pro';
     background-image: url('folk-pattern.png');
     background-repeat: repeat;
 }
 .calc-body {
     text-align: center;
-    margin: 30px auto;
-    border: 1px solid red;
-    max-width: 50%;
+    margin: 50px auto;
+    background: #1e4363;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    max-width: 40%;
     padding: 30px;
-    max-height: 100%;
+    border-radius: 20px;
+    min-height: 400px;
+}
+.calc-field {
+    max-width: 100%;
+    padding: 10px;
+    min-height: 50px;
+    background: #FCF2CB;
+    border-radius: 5px;
+}
+#copyright-info {
+    background: rgb(196, 196, 196, 0.7);
+    padding: 10px;
 }
