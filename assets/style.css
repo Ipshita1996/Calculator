@@ -72,7 +72,7 @@ body {
     background: var(--tertiary, red);
 }
 #equal {
-    background: var(--tertiary, red);
+    background: var(--colorBody, blue);
 }
 #equal:hover {
     color:white;
@@ -81,4 +81,17 @@ body {
     text-align: center;
     background: var(--copyrightColor,lightgrey);
     padding: 10px;
+}
+#numText {
+    font-size: 1.5em;
+    padding: 20px 0px 20px 0px;
+    background: none;
+    border:none;
+    color: var(--tertiary, red);
+    box-shadow: none;
+    text-align: right;
+    min-width: 90%;
+}
+#numText:focus {
+    outline: none;
 }
