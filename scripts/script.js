@@ -24,7 +24,6 @@ var operate = function(operator, num1, num2) {
 
 //adding numbers to textfield
 var editField =  document.querySelector('#numText');
-//editField.value = "1 + 2 - 3";
 var numbers = document.querySelectorAll(".numbers p");
 var operators = document.querySelectorAll(".operations p");
 var numArray = Array.apply(null, numbers);
@@ -33,20 +32,35 @@ var opArray = Array.apply(null,operators);
 numArray.forEach(element => {
     element.addEventListener("click", function(){
         console.log(element.innerHTML);
-        editField.value += element.innerHTML;
+        if(element.innerHTML == "DEL") {
+            editField.value = editField.value.slice(0, -1);
+        } else {
+            editField.value += element.innerHTML;
+        }
+        
     });
 });
+
 opArray.forEach(element => {
     element.addEventListener("click", function(){
         console.log(element.innerHTML);
-        if(editField.value != ""){
-            editField.value += " "+element.innerHTML+" ";
+        if(element.innerHTML == "=") {
+            alert("call eval");
+        } else {
+            console.log("spliced and found "+editField.value.slice(-1))
+            let op = editField.value.slice(-1)
+            if( op == "-" || op == "+" || op == "*" || op == "/") {
+                editField.value = editField.value.slice(0, -1);
+                editField.value += element.innerHTML;
+            } else if(editField.value != "") {
+                editField.value += element.innerHTML;
+            }
         }
+        //if value ends with operator override recent one
     });
 });
-//first operator should always be a number
-//add same functionality for operators as well (if two operators clicked on a row the overwrite the most recent operator)
-//modify DEL button
+
+//modify the = button
 
 //the clear button
 var clearButton = document.querySelector(".calc-field span");
