@@ -6,10 +6,7 @@ This project is a version of the common and simple calculators. It has no scient
 I started out with the very informative courses at [The Odin Project](https://www.theodinproject.com/courses/web-development-101) and have begun with **Web Development 101**. This part was one of the many sub-projects I shall be taking on in the **Javascript Basics** portion. The entire exercise is proving to be a very good learning experience.
 
 ## Screenshots
-<img src="assets/images/screenshots/bw.PNG" width="500px">
-<img src="assets/images/screenshots/color.PNG" width="500px">
-<img src="assets/images/screenshots/reset.PNG" width="500px">
-<img src="assets/images/screenshots/32.PNG" width="500px">
+<img src="assets/images/screenshots/one.PNG" width="500px">
 
 ## Tech/Framewroks Used
 Nothing fancy just same old HTML5, CSS3 and Javascript
