@@ -30,14 +30,23 @@ numArray.forEach(element => {
 
 opArray.forEach(element => {
     element.addEventListener("click", function(){
-        isDecimalAllowed = true;
+        
         if(element.innerHTML == "=") {
             let res = eval(editField.value)
             if(res == Infinity) {
-                alert("You just diveided by zero!, Try again");
+                alert("You just divided by zero! Try again");
                 editField.value = "";
             } else {
-                editField.value = eval(editField.value)
+                if(isNaN(res)) {
+                    alert("0/0 always returns Nan, try again");
+                    editField.value = "";
+                } else {
+                    editField.value = eval(editField.value)
+                } //BUG FIX FOR decimal points
+                if(res.indexOf(".") == -1){
+                    isDecimalAllowed = true;
+                }
+                
             }
             
         } else {
